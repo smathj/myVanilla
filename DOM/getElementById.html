@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementById</title>
+</head>
+<body>
+    <input type="text" id="userid">
+    <p>태그명을 사용해서 HTML 요소를 찾습니당. document.getElementById()</p>
+
+    <script>
+        console.log('=========ID 로 찾기============');
+        let element = document.getElementById("userid");
+        console.log(element);
+
+        console.log('=========태그로 찾기============');
+        let elements = document.getElementsByTagName("p");
+        console.log(elements); // HTMLCollection
+        setTimeout(() => {
+            elements[0].innerText = "짖어";    
+        }, 2000);
+        
+    </script>
+</body>
+</html>

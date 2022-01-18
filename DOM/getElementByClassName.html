@@ -1,0 +1,22 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p class="para">HTML 요소에 대한 접근</p>
+    <p class="para">클래스명을 사용해서 HTML 요소를 찾습니다. document.getElementByClassName()</p>
+    <script>
+        let elements = document.getElementsByClassName("para");
+        console.log(elements);
+
+        for(let i in elements) {
+            if(i < elements.length) {
+                console.log(i);
+                console.log(elements[i].innerText);
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("http://localhost:3000/posts/2", {
+            method: "PUT",
+            body : JSON.stringify({
+                id: 2,
+                title: "키북이의 빨간맛",
+                author: "나태쿤"
+            }),
+            headers: {
+                "content-type" : "application/json; charset=UTF-8;"
+            }
+        }).then((resp) => resp.json())
+          .then((json) => console.log(json));
+    </script>
+</body>
+</html>

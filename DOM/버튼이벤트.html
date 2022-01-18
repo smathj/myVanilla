@@ -1,0 +1,26 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="doSave(event)">저장</button>
+
+    <script>
+        function doSave(e) {
+            //console.log(e);
+            console.log(e.target); // 버튼 DOM
+            let obj = e.target;
+            obj.disable = true; // 중복클릭방지
+            
+            setTimeout(() => {
+                obj.disable = false;
+                obj.setAttribute("style", "color : red");
+                console.log(obj.hasAttribute("style"));
+                obj.removeAttribute("innerText");
+                console.log('저장 완료');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

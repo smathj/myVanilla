@@ -1,0 +1,33 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <select id="select1" onchange="doChange()">
+        <option>-</option>
+        <option value="KO">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+
+    <script>
+        // 일반 함수
+        function doChange() {
+            let selectedValue = document.getElementById("select1").value;
+            selectedValue == '-' ? selectedValue = undefined : selectedValue;
+            console.log(selectedValue);
+
+        }
+
+        // 이벤트 등록
+        document.getElementById("select1").addEventListener("change", test);
+        // 이벤트 함수
+        function test() {
+            let selectedValue = document.getElementById("select1").value;
+            selectedValue == '-' ? selectedValue = undefined : selectedValue;
+            console.log(selectedValue);            
+        }
+    </script>
+</body>
+</html>

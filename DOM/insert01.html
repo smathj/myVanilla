@@ -1,0 +1,43 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--beforebegin-->
+    <ul id="myUlTag">
+    <!--afterbegin-->        
+        <li>하북이</li>
+        <li>키북이</li>
+    
+    <!--beforeend-->
+    </ul>
+    <!--afterend-->
+
+    <button onclick="outFrontAdd()">앞에다 h2 추가</button>
+    <button onclick="add()">제일 앞 li 추가</button>
+    <button onclick="next()">다음 li 추가</button>
+    <button onclick="outBackAdd()">밖게다 h2 추가</button>
+
+    <script>
+        function outFrontAdd() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentHTML("beforebegin", "<h2>앞에다 추가</h2>");
+        }        
+        function outBackAdd() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentHTML("afterend", "<h2>밖게다 추가</h2>");
+        }
+        function add() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentHTML("afterbegin", "<li>나북이</li>");
+        }
+        function next() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentHTML("beforeend", "<li>다음쿤</li>");
+        }
+     
+    </script>
+</body>
+</html>

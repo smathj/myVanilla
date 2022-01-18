@@ -1,0 +1,22 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1" value="ABC">
+    <script>
+        let oText1 = document.getElementById("text1");
+        let textValue = oText1.value;
+        console.log(textValue);
+
+        // value값을 속성을 이용해서 가져오기
+        // getattribute("value") 이용하기
+        console.log(document.getElementById("text1").getAttribute("value"));
+
+        // 값 변경
+        document.getElementById("text1").setAttribute("value", "치킨");
+        document.getElementById("text1").setAttribute("style", "color : blue");
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>앞에쿤</h2>
+    <!--beforebegin-->
+    <ul id="myUlTag">
+    <!--afterbegin-->        
+        <li>하북이</li>
+        <li>키북이</li>
+    
+    <!--beforeend-->
+    </ul>
+    <h2>뒤에쿤</h2>
+    <!--afterend-->
+
+    <button onclick="front()">front 글자바꾸기</button>
+    <button onclick="first()">제일앞 글자바꾸기</button>
+    <button onclick="next()">다음 글자바꾸기</button>
+    <button onclick="back()">back 글자바꾸기</button>
+
+    <script>
+        function front() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentText("beforebegin", "프론트 앞에쿤");
+        }        
+        function back() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentText("afterend", "백 뒤에쿤");
+        }
+        function first() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentText("afterbegin", "나태쿤");
+        }
+        function next() {
+            let h = document.getElementById("myUlTag");
+            h.insertAdjacentText("beforeend", "대리쿤");
+        }
+     
+    </script>
+</body>
+</html>

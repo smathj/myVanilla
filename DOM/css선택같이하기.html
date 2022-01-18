@@ -1,0 +1,44 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>효율적으로 CSS선택 같이하기</title>
+</head>
+<body>
+    관심사 : 
+    <label><input type="checkbox" name="chk_interest" value="it"> IT/컴퓨터</label>
+    <label><input type="checkbox" name="chk_interest" value="entertainment"> 엔터테이먼트</label>
+    <label><input type="checkbox" name="chk_interest" value="sports"> 스포츠</label>
+    <label><input type="checkbox" name="chk_interest" value="shoping"> 쇼핑</label>
+    <label><input type="checkbox" name="chk_interest" value="book"> 도서/책</label>
+
+    <script>
+        // 1
+        function method1() {
+            console.log("=============== 첫번쨰 방법 ======================");
+            let elements = document.getElementsByName("chk_interest");
+            let checked_items = [];
+            for(let i=0; i<elements.length; i++) {
+                if(elements[i].checked) {
+                    console.log(elements[i]);
+                    checked_items.push(elements[i]);
+                }
+            }
+        }
+
+
+        // 2
+        function method2() {
+            console.log("=============== 두번쨰 방법 ======================");
+            let elements2 = document.querySelectorAll("[name=chk_interest]:checked");
+            // console.log(elements2[0]); // NodeList
+            // console.log(elements2[1]); // NodeList
+            for(let i=0; i< elements2.length; i++) {
+                console.log(elements2[i]);
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>
