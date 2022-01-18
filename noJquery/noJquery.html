@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="noJquery.js" defer></script>
+</head>
+
+<body>
+<div id="container">
+    <div id=left>
+        <table>
+            <colgroup>
+                <col width="150px">
+                <col width="150px">
+                <col width="150px">
+                <col width="150px">
+            </colgroup>
+
+            <thead>
+                <tr>    
+                    <th class="chkTh"><input id="leftTopChk" type="checkbox"></th>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>직무</th>
+                </tr>
+            </thead>
+
+            <tbody id="lTbody">
+                <tr id="trNum_1">
+                    <td class="chkTh"><input id="chk_1" name="leftChk" type="checkbox"></td>
+                    <td id="num_1">1</td>
+                    <td id="name_1">이하북</td>
+                    <td id="job_1">하북이</td>
+                </tr>
+                <tr id="trNum_2">
+                    <td class="chkTh"><input id="chk_2" name="leftChk" type="checkbox"></td>
+                    <td id="num_2">2</td>
+                    <td id="name_2">북서풍 하북이</td>
+                    <td id="job_2">지리</td>
+                </tr>
+                <tr id="trNum_3">
+                    <td class="chkTh"><input id="chk_3" name="leftChk" type="checkbox"></td>
+                    <td id="num_3">3</td>
+                    <td id="name_3">피자 하북이</td>
+                    <td id="job_3">피자스쿨</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="center">
+        <span class="btn" id="add">추가</span><br>
+        <span class="btn" id="remove">제거</span>
+        
+    </div>
+
+    <div id=right>
+        <table>
+            <colgroup>
+                <col width="150px">
+                <col width="150px">
+                <col width="150px">
+                <col width="150px">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th class="chkTh"><input id="rightTopChk" type="checkbox"></th>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>직무</th>
+                </tr>
+            </thead>
+
+            <tbody id="rTbody">
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+    <button onclick="search()">BBQ 후라이드 찾기</button><br>
+    <input type="text" id="bbq" value="후라이드">
+    <input type="text" id="kfc" value="후라이드">
+    <input type="text" id="gyochon" value="후라이드">
+    <script>
+    </script>
+</body>
+</html>

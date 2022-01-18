@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    
+}
+table,tr,th,td {
+    border : 1px solid black;
+}
+
+th {
+    background-color: dodgerblue;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#center {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.btn {
+    background-color: rgb(226, 64, 64);
+    width: 50px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid black;
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.5);
+}
+
+.chkTh {
+    display: flex;
+    justify-content: center;
+}
+
+
+table {
+    max-height: 500px;
+}
+
+
+
+#rTbody td, #lTbody td {
+    height: 30px;
+}
+
+tr:hover {
+    background-color: black;
+    color : white;
+}

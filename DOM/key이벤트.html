@@ -1,0 +1,21 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"
+        onkeypress="myFunction(event)"
+        onkeydown="myFunction(event)"
+        onkeyup="myFunction(event)"
+    >
+
+    <script>
+        function myFunction(e) {
+            console.log(e.type);
+            console.log(e.target);
+            console.log(e.target.value);
+        }
+    </script>
+</body>
+</html>
